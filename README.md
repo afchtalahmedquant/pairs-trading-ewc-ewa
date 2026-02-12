@@ -117,7 +117,7 @@ Ce projet est un backtest simple réalisé dans un cadre académique :
 Étudiant en Finance - 4ème année(ENCGF)
 
 - GitHub: [@afchtalahmedquant](https://github.com/afchtalahmedquant)
-- LinkedIn: [Ahmed Afachtal]
+- LinkedIn: Ahmed Afachtal
 
 
 
