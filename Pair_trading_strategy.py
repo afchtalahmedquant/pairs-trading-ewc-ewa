@@ -418,76 +418,6 @@ class PairstradingStrategy:
         plt.show()
 
 
-    def generate_publication_linkedin(self, entry_threshold, exit_threshold):
-
-        plt.style.use('seaborn-v0_8-white')
-        plt.rcParams['font.family']='sans-serif'
-        plt.rcParams['font.size']=11
-        fig, ax=plt.subplots(figsize=(10,6))
-
-        #PnL cumulative:
-        ax.plot(self.pnl_cumulative.index, self.pnl_cumulative, color='#000000', linewidth=2)
-        ax.set_title('Cumulative PnL ', weight='bold', pad=20)
-        ax.set_ylabel('PnL ($)', fontsize=12)
-        ax.axhline(0, color='gray', linestyle='--', alpha=0.3)
-        ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-        ax.grid(alpha=0.3, axis='y')
-        plt.tight_layout()
-        plt.savefig('linkedin _pnl.png', dpi=300, bbox_inches='tight', facecolor='white')
-        plt.close()
-
-
-        # zscore
-        fig, ax=plt.subplots(figsize=(10,6))
-        ax.plot(self.df_trading["zscore"].index, self.df_trading["zscore"], color='#4A90E2',linewidth=2, alpha=0.8)
-        ax.axhline(entry_threshold, color='red', linestyle='--', label='Entry', alpha=0.7)
-        ax.axhline(-entry_threshold, color='red' , linestyle='--', alpha=0.7)
-        ax.axhline(exit_threshold, color='green', linestyle='--', label='Exit', alpha=0.7)
-        ax.axhline(-exit_threshold, color='green', linestyle='--', label='Exit')
-        ax.axhline(0, color='black', linestyle='-', alpha =0.3)
-        ax.set_title("Zscore of Spread",fontsize=12, fontweight='bold', pad=20)
-        ax.set_ylabel("Zscore", fontsize=12, fontweight='bold')
-        ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-        ax.legend(loc='upper right', frameon=False)
-        ax.grid(alpha=0.2, axis='y')
-        plt.tight_layout()
-        plt.savefig('linkedin_zscore.png', dpi=300, bbox_inches='tight', facecolor='white')
-        plt.close()
-
-        # Hedge Ratio (Kalman)
-
-        fig,ax=plt.subplots(figsize=(10,6))
-        ax.plot(self.df_trading['beta_kalman'].index, self.df_trading['beta_kalman'], color='#9B59B6', linewidth=2)
-        ax.set_title('Hedge Ratio Dynamique ( Beta Kalman)', fontsize=12, fontweight='bold', pad=20)
-        ax.set_ylabel('Beta kalman', fontweight='bold')
-        ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-        ax.grid(alpha=0.2, axis='y')
-        plt.tight_layout()
-        plt.savefig('linkedin_hedgeratio.png',dpi=300, bbox_inches='tight', facecolor='white')
-        plt.close()
-
-        # Distribution des rendements
-        fig, ax=plt.subplots(figsize=(10,6))
-        ax.hist(self.returns_net, bins=50,color='#34495E' ,edgecolor='black', linewidth=1.5, alpha=0.7)
-        ax.axvline(0, color='red', linestyle='--', alpha=0.7)
-        ax.set_title( "Distribution of Returns", fontsize=16, fontweight='bold', pad=20)
-        ax.set_xlabel('Returns', fontsize=12, fontweight='bold')
-        ax.set_ylabel('Frequency', fontsize=12, fontweight='bold')
-        ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-        ax.grid(alpha=0.2, axis='y')
-        plt.tight_layout()
-        plt.savefig('linkedin_dist_returns.png', dpi=300, bbox_inches='tight', facecolor='white')
-        plt.close()
-
-        print(f" 4 images généres pour la publication ")
-
-
-
-
     def run_full_analysis(
         self, 
         entry_threshold: float = 2.0, 
@@ -533,4 +463,5 @@ class PairstradingStrategy:
 
         return metrics
     
+
 
