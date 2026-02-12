@@ -15,14 +15,14 @@ Capital initial : 100,000$
 
 ## PERFORMANCE METRICS
 
-Annual_Return................. 5.42%
-Sharpe_Ratio.................. 0.9731
-Sortino_Ratio................. 0.9314
-Max_Drawdown.................. -9.09%
-Calmar_Ratio.................. 0.5960
-Win_Rate...................... 44.06%
-Profit_Factor................. 1.4021
-Total_Return.................. 355.97%
+-Annual_Return................. 5.42%
+-Sharpe_Ratio.................. 0.9731
+-Sortino_Ratio................. 0.9314
+-Max_Drawdown.................. -9.09%
+-Calmar_Ratio.................. 0.5960
+-Win_Rate...................... 44.06%
+-Profit_Factor................. 1.4021
+-Total_Return.................. 355.97%
 
 
 
