@@ -12,9 +12,9 @@ Stratégie de pairs trading développée dans le cadre de mes études en finance
 Période : 1996-2025 (29 ans)  
 Capital initial : 100,000$
 
-============================================================
-PERFORMANCE METRICS
-============================================================
+
+## PERFORMANCE METRICS
+
 Annual_Return................. 5.42%
 Sharpe_Ratio.................. 0.9731
 Sortino_Ratio................. 0.9314
@@ -23,8 +23,8 @@ Calmar_Ratio.................. 0.5960
 Win_Rate...................... 44.06%
 Profit_Factor................. 1.4021
 Total_Return.................. 355.97%
-Nombre de trades...............1490
-============================================================
+
+
 
 
 
